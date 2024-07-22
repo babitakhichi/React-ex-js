@@ -1,0 +1,16 @@
+export const text = {
+  pageTitle: "FAQs",
+  typeOfFaq: "Type of FAQ",
+  question: "Question",
+  answer: "Answer",
+  addTitle: "Add FAQs",
+  editTitle: "Edit FAQs",
+  massage: "Are you sure?",
+  text: "You want to delete this faq, you won't be able to revert this!",
+  action: "Action",
+  answerPlaceholder: "Enter Answer",
+  questionPlaceholder: "Enter Question",
+  addFaqs: "Add FAQs",
+  faqsDetails: "FAQs Details",
+  deleteDocumentText: "you want to delete this FAQs?",
+};

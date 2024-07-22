@@ -1,0 +1,396 @@
+.videoConferencing {
+  padding: 40px 0 70px;
+  .userInfo {
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 24px;
+    }
+    &_links {
+      margin-top: 30px;
+      a {
+        padding: 25px 40px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        em {
+          font-size: 34px;
+          color: color(50);
+        }
+        p {
+          font-size: 20px;
+        }
+        &:first-child {
+          background-color: color(550);
+          &:hover {
+            background-color: lighten(color(550), 5%);
+          }
+        }
+        + a {
+          background-color: color(500);
+          margin-left: 20px;
+          &:hover {
+            background-color: lighten(color(500), 5%);
+          }
+        }
+      }
+    }
+  }
+  // meetings
+  .meetingsSec {
+    &_meetingIcons {
+      width: 35px;
+      height: 35px;
+      background: transparent;
+      min-width: 100%;
+      color: color(50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      &.user {
+        background-color: color(550);
+      }
+      &.edit {
+        background-color: color(500);
+      }
+      &.delete {
+        background-color: #fb5b5b;
+      }
+      &.share {
+        background-color: color(90);
+        color: color(800);
+      }
+      em {
+        font-size: 20px;
+      }
+    }
+    &_wrap {
+      border: 1px solid #e3e3e3;
+      padding: 30px 50px;
+      border-radius: 5px;
+    }
+    &_head {
+      .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        .nav-item {
+          white-space: nowrap;
+          padding-bottom: 18px;
+          &:not(:last-child) {
+            margin-right: 44px;
+          }
+        }
+        .nav-link {
+          border: 0;
+          color: #333333;
+          padding: 5px;
+          position: relative;
+          transition: all 0.5s;
+          &:before {
+            width: 0;
+            height: 2px;
+            background-color: color(550);
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+            transition: all 0.5s;
+          }
+          &:hover,
+          &.active {
+            color: color(550);
+            text-shadow: 0 0 0.01px color(550), 0 0 0.01px color(550);
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .tab-content {
+        width: 100%;
+        border-top: 1px solid rgba(color(70), 0.5);
+        padding-top: 32px;
+        .table {
+          tr {
+            &:not(:last-child) {
+              td {
+                border-bottom: 15px solid color(50);
+              }
+            }
+            td {
+            }
+          }
+          td {
+            background-color: color(100);
+            border: 0;
+            vertical-align: middle;
+            padding: 28px;
+            font-size: 18px;
+            font-family: font(bd);
+            white-space: nowrap;
+            &:first-child {
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+            &:last-child {
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+            &:nth-child(-n + 2) {
+              width: 180px;
+            }
+          }
+          .react-ripples {
+            + .react-ripples {
+              margin-left: 10px;
+            }
+          }
+          .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            min-width: 90px;
+            width: 90px;
+            height: 35px;
+            font-size: 16px;
+            font-family: font(rg);
+            &-success {
+              background-color: #30ca9f;
+              border-color: #30ca9f;
+              &:hover,
+              &:focus,
+              &:active,
+              &:not(:disabled):not(.disabled):active,
+              &:not(:disabled):not(.disabled).active:focus {
+                border-color: lighten(#30ca9f, 10%);
+                background-color: lighten(#30ca9f, 10%);
+                outline: none;
+                box-shadow: none !important;
+              }
+            }
+            &-outline-secondary {
+              background-color: color(50);
+              color: color(800);
+              border-color: #d9d9d9;
+              &:hover,
+              &:focus,
+              &:active,
+              &:not(:disabled):not(.disabled):active,
+              &:not(:disabled):not(.disabled).active:focus {
+                border-color: lighten(#d9d9d9, 2%);
+                background-color: lighten(#d9d9d9, 2%);
+                color: color(800);
+                outline: none;
+                box-shadow: none !important;
+              }
+            }
+          }
+        }
+        .meetingTable {
+          max-height: 600px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 1599px) {
+    .userInfo {
+      h1 {
+        font-size: 45px;
+      }
+    }
+    .meetingsSec {
+      &_wrap {
+        padding: 25px 45px;
+      }
+    }
+  }
+  @media (max-width: 1499px) {
+    .userInfo {
+      h1 {
+        font-size: 40px;
+      }
+      h4 {
+        font-size: 22px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 30px 0 60px;
+    .userInfo {
+      h1 {
+        font-size: 35px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      &_links {
+        margin-top: 25px;
+        a {
+          padding: 20px 32px;
+          p {
+            font-size: 18px;
+          }
+          em {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .meetingsSec {
+      &_wrap {
+        padding: 22px 40px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &_head {
+        .tab-content {
+          padding-top: 25px;
+        }
+        .nav-tabs {
+          .nav-link {
+            &:before {
+              bottom: -10px;
+            }
+          }
+          .nav-item {
+            padding-bottom: 12px;
+            &:not(:last-child) {
+              margin-right: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 20px 0 40px;
+    .userInfo {
+      margin-bottom: 20px;
+      h1 {
+        font-size: 30px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .meetingsSec {
+      &_wrap {
+        padding: 20px 35px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      &_head {
+        .tab-content {
+          padding-top: 20px;
+          .table {
+            td {
+              padding: 24px;
+              font-size: 16px;
+            }
+            .btn {
+              min-width: 80px;
+              width: 80px;
+              font-size: 14px;
+            }
+          }
+        }
+        .nav-tabs {
+          .nav-link {
+            font-size: 15px;
+            &:before {
+              bottom: -5px;
+            }
+          }
+          .nav-item {
+            padding-bottom: 6px;
+            &:not(:last-child) {
+              margin-right: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 15px 0 30px;
+    .userInfo {
+      h1 {
+        font-size: 25px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+      &_links {
+        margin-top: 20px;
+        a {
+          padding: 18px 28px;
+          p {
+            font-size: 16px;
+          }
+          em {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .meetingsSec {
+      &_wrap {
+        padding: 20px 28px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 15px 0 30px;
+    .userInfo {
+      h1 {
+        font-size: 20px;
+      }
+      &_links {
+        margin-top: 15px;
+        a {
+          padding: 14px 22px;
+          p {
+            font-size: 15px;
+          }
+          em {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .meetingsSec {
+      &_wrap {
+        padding: 15px;
+      }
+      &_head {
+        .nav-tabs {
+          .nav-item {
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+          }
+        }
+        .tab-content {
+          .table {
+            td {
+              padding: 20px;
+              font-size: 14px;
+            }
+            .btn {
+              min-width: 70px;
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

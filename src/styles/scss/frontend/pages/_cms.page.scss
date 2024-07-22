@@ -1,0 +1,75 @@
+.cmsPage{
+    h1, h2,h3,h4,h5,h6{font-family: font(bd);}
+    p, ul, ol{font-family: font(sb);}
+}
+.faqPage{
+    .accordion{
+        border: none; background-color: transparent;
+        &-item{
+            border: none;background: color(100); border-radius: 5px;
+            &:not(:last-child){
+                margin-bottom: 25px;
+            }
+        }
+        &-header{
+           button{
+                background-color: transparent; padding: 25px 30px; font-size: 20px; line-height: 1.35; color: color(900); font-family: font(bd);
+                box-shadow: none;
+                &:focus{outline: none; box-shadow: none;}
+                &:after{
+                    background: none;
+                    content: "\e901";
+                    font-family: 'icomoon';
+                    font-size: 15px;
+                    color: #707070;
+                }
+           }
+        }
+        &-body{
+            padding: 0 30px 26px;
+            p{margin: 0; font-size: 18px; line-height: 1.55;}
+        }
+    }
+    @include media-breakpoint-up(xl){
+        .heading{
+            p{font-size: 20px}
+        }
+    }
+    @include media-breakpoint-up(xxl){
+        .heading{
+            p{font-size: 24px}
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .accordion{
+            &-item{
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+            &-header{
+               button{padding: 20px; font-size: 18px;}
+            }
+            &-body{
+                padding: 0 20px 20px;
+                p{font-size: 16px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .accordion{
+            &-item{
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+            }
+            &-header{
+               button{padding: 15px; font-size: 16px;}
+            }
+            &-body{
+                padding: 0 15px 15px;
+                p{font-size: 14px;}
+            }
+        }
+    }
+}

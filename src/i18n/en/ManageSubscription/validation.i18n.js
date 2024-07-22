@@ -1,0 +1,33 @@
+export const validation = {
+  planName: "Please  enter your plan name",
+  price: "Please  enter your original price",
+  quaterlyPrice: "Please  enter your quaterly price",
+  halfYearlyPrice: "Please  enter your half yearly price",
+  annualPrice: "Please  enter your annual price",
+  planType: "Please  enter your plan type",
+  priceGreater: "Price must be grater then 0 ",
+  quarterlyGreater: "Quarterly price must be grater then 0 ",
+  half_yearlyGreater: "Half yearly price must be grater then 0",
+  annualGreater: "Annual price must be grater then 0 ",
+  translation: "Please  enter your translation",
+  translationGreaterThenZero: "Translation must be grater then 0 ",
+  priceValid: "Please enter valid price ",
+  quarterlyValid: "Please enter valid quarterly price ",
+  half_yearlyValid: "Please enter valid half yearly price",
+  annualValid: "Please enter valid annual price ",
+  quarterlyThanPrice:
+    "Quarterly price must be less than or equal to original price ",
+  half_yearlyThanPrice:
+    "Half yearly price must be less than or equal to quarterly price",
+  annualThanPrice:
+    "Annual price must be less than or equal to half yearly price",
+  meetDuration: "Please  enter your maximum meeting duration",
+  meetDurationGreaterThenZero: "Minimum meeting duration must be 30 mins ",
+  audioVideoGreaterThenZero: "Audio & video conference  must be grater then 0 ",
+  cloudGreaterThenZero: "Secure cloud storage must be grater then 0 ",
+  audioVideo: "Please  enter your audio & video conference (HD quality)",
+  cloud: "Please  enter your Secure cloud storage",
+  translationType: "Please  enter your translation type",
+  documentType: "Please  enter your document translation Format",
+  mediaType: "Please  enter your media translation Format",
+};

@@ -1,0 +1,4 @@
+%gradiant {
+  $list1: color(450), color(500);
+  @include linearGradient('to left', $list1);
+}

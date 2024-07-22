@@ -1,0 +1,85 @@
+.contactPage{
+    &_left{
+        background: color(550);
+        border-radius: 5px;
+        padding: 30px 20px 30px 30px;
+        min-height: 100%;
+        h3{
+            font-size: 24px; line-height: 1.33; font-family: font(bd);
+        }
+        h4{margin: 16px 0; font-size: 18px; font-family: font(sb);}
+        .text-450{color: color(450) !important;}
+        .contactInfo{
+            margin-bottom: 25px;
+            li:not(:last-child){
+                margin-bottom: 22px;
+            }
+            em{
+                margin-right: 10px; flex-shrink: 0; font-size: 20px;
+                color:color(500); background: #38EF7D;
+                        background: -moz-linear-gradient(180deg, #38EF7D 5%, #32D595 10%, #2FC6A4, #2CB9B0 100%);
+                        background: -webkit-linear-gradient(180deg, #38EF7D 5%, #32D595 10%, #2FC6A4, #2CB9B0 100%);
+                        background: linear-gradient(180deg, #38EF7D 5%, #32D595 10%, #2FC6A4, #2CB9B0 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38EF7D",endColorstr="#2CB9B0",GradientType=1);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+            }
+            h6{ color: #B3C1CB; font-size: 18px; line-height: 1.35; margin-bottom: 3px; margin-top: -3px;}
+        }
+    }
+    .heading {
+        margin-bottom: 70px;
+    }
+    textarea{
+        min-height:100px; resize:none;
+    }
+    .form-group{
+        label{
+            color: color(800);
+        }
+    }
+    .form-label{
+        font-family: font(sb);
+    }
+    @media (max-width:1499px) {
+        .heading {
+            margin-bottom: 30px;
+        }
+    }
+    @include media-breakpoint-up(xxl){
+        .form-group{
+            margin-bottom: 28px;
+        }
+        &_right{
+            padding-left: 35px;
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .heading{
+            margin-bottom: 20px;
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .heading{
+            margin-bottom: 10px;
+        }
+        &_left{
+            padding: 15px;
+            h3{
+                font-size: 16px;
+            }
+            p{font-size: 14px;}
+            h4{font-size: 16px;}
+            .contactInfo{
+                margin-top: 20px;
+                li:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                em{
+                    font-size: 18px;
+                }
+                h6{font-size: 16px; margin-top: -3px;}
+            }
+        }
+    }
+}

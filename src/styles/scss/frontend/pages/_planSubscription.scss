@@ -1,0 +1,257 @@
+.subscriptionPage{
+    .planSubscription{
+        &_box{
+            .title{
+                font-size: 22px;padding-bottom: 20px;color: color(550);border-bottom: 1px solid color(70);
+            }
+            .noActivePlans{
+                max-width: 575px;padding: 125px 0;
+                h3{font-size: 22px;color: color(550);}
+                p{color: #999999;}
+            }
+            .plansList{
+                padding-top: 40px;
+                &_box{ flex: 0  0 50%;
+                    h5{font-size: 18px;}
+                    p{font-size: 16px;}
+                    &:nth-child(odd){
+                        &:after{
+                        position: absolute;top:0;right: 0;content: "";width: 2px;height: 100%;background-color: color(70);content: "";
+                        }
+                    }
+                    &:nth-child(even){padding-left: 40px;}
+                    &:not(:nth-last-child(-n+2)){
+                        margin-bottom: 40px;
+                    }
+                    &-explore{
+                        flex: 1;
+                        &::after{display: none;}
+                    }
+                    .btn{
+                        &-feature{
+                            min-width: 100px; background-color: #00A9EE;
+                            &:hover, &:focus{
+                                background-color: darken($color: #00A9EE, $amount: 5%) !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .billingList{ padding-top: 20px;
+                &:not(:last-child){padding-bottom: 20px;border-bottom: 1px solid color(70);}
+                h5{font-size: 18px;margin-bottom: 20px;}
+                ul{
+                    margin: -30px -20px 20px;
+                    li{
+                        word-break: break-word; padding-left: 20px; padding-right: 20px; padding-top: 30px;
+                        span{font-size: 14px;margin-bottom: 10px;}
+                        p{font-size: 16px;}
+                    }
+                }
+            } 
+            .horizontalTabs{
+                margin-bottom: 25px;
+                .nav{
+                    &-item{&:not(:last-child){margin-right: 30px;}}
+                    &-link{
+                        font-size: 18px;
+                        font-family: font(rg);
+                        border-radius: 0;
+                        padding: 2px 6px;
+                        background-color: transparent;
+                        color: rgba($color: color(550), $alpha: 0.50);
+                        &.active{
+                            color: color(500);
+                            font-family: font(eb);
+                            border-bottom: 3px solid color(500);
+                        }
+                    }
+                }
+            }
+            .tableDropdown{
+                .dropdown-toggle{
+                    min-width: 100%;
+                    padding: 0;
+                    background-color: transparent;
+                    background-image: none;
+                    height: auto;
+                    padding: 0 10px;
+                    em{
+                        font-size: 25px;
+                        color: #AAAAAA;
+                    }
+                    &::after{display: none;}
+                }
+                .dropdown-menu{
+                    border: 1px solid color(90);
+                    em{
+                        padding-right: 10px;
+                        font-size: 18px;
+                        color: #D1D1D1;
+                        &.icon-user-change{font-size: 25px;}
+                    }
+                }
+                .dropdown-item{
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    color: #292929;
+                    font-family: font(sb);
+                    padding: 8px 15px;
+                    &:hover{background-color: transparent;}
+                }
+            }
+        }
+        @include media-breakpoint-down(xxl) {
+            &_box{
+                .title {font-size: 20px;padding-bottom: 15px;}
+                .noActivePlans{
+                    padding: 60px 0;
+                    h3{font-size: 20px;}
+                }
+                .plansList{
+                    padding-top: 30px;
+                    &_box{
+                        h5{font-size: 16px;}
+                        p{font-size: 14px;}
+                        &:not(:nth-last-child(-n+2)){
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .billingList{ padding-top: 15px;
+                    &:not(:last-child){padding-bottom: 15px;}
+                    h5{font-size: 16px;margin-bottom: 15px;}
+                    ul{
+                        margin-bottom: 15px;
+                        li{
+                            p{font-size: 15px;}
+                        }
+                    }
+                }
+                .horizontalTabs{
+                    margin-bottom: 20px;
+                    .nav{
+                        &-item{&:not(:last-child){margin-right: 20px;}}
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xl) {
+            &_box{
+                .noActivePlans{
+                    padding: 40px 0;
+                    h3{font-size: 18px;}
+                }
+                .plansList{
+                    padding-top: 20px;
+                    &_box{
+                        &:nth-child(even){padding-left: 20px;}
+                    }
+                }
+                .tableDropdown{
+                    .dropdown-item{
+                        padding: 6px 12px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            &_box{
+                .title {font-size: 18px;padding-bottom: 10px;}
+                .noActivePlans{
+                    padding: 30px 0;
+                }
+                .plansList{
+                    &_box{
+                        .btn{
+                            &-feature{
+                                min-width: auto;
+                            }
+                        }
+                    }
+                }
+                .billingList{ 
+                    h5{margin-bottom: 10px;}
+                    ul{ 
+                         margin: -15px -15px 10px;
+                         li{padding-left: 15px; padding-right: 15px; padding-top: 15px;}
+                    }
+                }
+                .horizontalTabs{
+                    margin-bottom: 15px;
+                    .nav{
+                        &-link{font-size: 16px;}
+                    }
+                }
+            } 
+        }
+        @include media-breakpoint-down(md) {
+            &_box{
+                .billingList{ 
+                    ul{
+                        li{
+                            &:not(:last-child){flex-basis: 33.33%;} 
+                        }
+                    }
+                }
+                .plansList{
+                    &_box{ 
+                        &:nth-child(even){padding-left: 10px;}
+                        &:not(:nth-last-child(-n+2)){
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .tableDropdown{
+                    .dropdown-item{
+                        padding: 3px 8px;
+                        font-size: 14px;
+                    }
+                    .dropdown-menu{
+                        em{
+                            font-size: 16px;
+                            &.icon-user-change{font-size: 20px;}
+                        }
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            &_box{
+                .title {font-size: 16px;}
+                .plansList{
+                    padding-top: 0;
+                    &_box{ flex: 0  0 100%; padding-top: 15px;
+                        h5{font-size: 15px;}
+                        &:nth-child(odd){
+                            &:after{
+                             display: none;
+                            }
+                        }
+                        &:nth-child(even){padding-left: 0;}
+                        &:not(:nth-last-child(-n+2)){
+                            margin-bottom: 0;
+                        }
+                        &:not(:last-child){padding-bottom: 15px;
+                            border-bottom: 1px solid color(70);
+                        }
+                    }
+                }
+                .billingList{ 
+                    ul{ margin-bottom: 5px;
+                        li{
+                            &:not(:last-child){flex-basis: 50%;} 
+                        }
+                    }
+                }
+                .horizontalTabs{
+                    margin-bottom: 10px;
+                    .nav{
+                        &-item{&:not(:last-child){margin-right: 10px;}}
+                    }
+                }
+            }
+        }
+    }
+}

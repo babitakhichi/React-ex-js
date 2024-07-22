@@ -1,0 +1,106 @@
+.authPage{
+    &_left{
+        padding: 120px 0 30px;overflow: auto;
+        background-image: url("#{$imageurl}/auth-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        &_logo{margin-bottom: 65px;}
+        &_form{max-width: 520px;margin: auto;}
+        &_head{
+            margin-bottom: 30px;
+            h1{font-size: 38px;line-height: 60px;font-weight: 800;color: color(800);}
+            p{
+                font-size: 16px;line-height: 24px;color: color(700);margin-top: 20px;
+                &.subhead{margin-top: 10px;color: color(580);}
+            }
+            .numberEdit{
+                font-size: 15px;line-height: 26px;color: #3B3B3B;
+                em{color: color(500);padding-right: 8px;}
+            }
+        }
+        .resend-link{color: #1592E6;}
+        
+        &_signUp{margin-top: 30px;}
+        &_field{padding-bottom: 20px;}
+        @media (max-width: 1599px) {
+            padding-top: 60px;
+        }
+        @include media-breakpoint-down(xxl){
+            padding-top: 40px;
+            &_logo{margin-bottom: 40px;}
+            &_head{
+                h1{font-size: 35px;line-height: 50px;}
+            }
+        }
+        @include media-breakpoint-down(xl){
+            padding-top: 30px;
+            &_logo{
+                margin-bottom: 30px;
+                img{max-width: 150px;}
+            }
+            &_form{padding: 0 20px;}
+            &_head{
+                h1{font-size: 30px;}
+            }
+            &_signUp{margin-top: 25px;}
+        }
+        @include media-breakpoint-down(lg){
+            &_head{
+                margin-bottom: 20px;
+                h1{font-size: 26px;line-height: normal;}
+                p{
+                    margin: 10px 0;font-size: 15px;
+                    &.subhead{font-size: 15px; line-height: normal;margin-top: 5px;}
+                }
+            }
+        }
+        @include media-breakpoint-down(md){
+            padding: 20px 0;
+            &_footer{font-size: 13px;}
+            &_signUp{margin-top: 20px;}
+            p{
+                font-size: 14px;
+                &.subhead{font-size: 14px;}
+            }
+        }
+        @include media-breakpoint-down(sm){
+            &_form{padding: 0 10px;max-width: 100%;}
+            &_head{
+                margin-bottom: 10px;
+                h1{font-size: 22px;}
+            }
+            &_logo{
+                img{max-width: 120px;}
+            }
+        }
+    }
+    .authPage_right{
+        &-img{
+            object-fit: contain;
+            background: color(550);
+            object-position: left bottom;
+        }
+        &-content{
+            font-size: 40px;
+            position: absolute;
+            top: 16%;
+            max-width: 485px;
+            left: 18%;
+            color: color(50);
+            line-height: 50px;
+            font-weight: 600;
+            @media (max-width:1599px){
+                font-size: 35px;
+                line-height: normal;
+            }
+            @include media-breakpoint-down(xxl){
+                font-size: 30px;
+                left: 15%;
+                max-width: 390px;
+            }
+            @include media-breakpoint-down(xl){
+                font-size: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.backheading{
+    font-size: 24px;color: color(550);margin-bottom: 30px;
+    a{ margin-right: 15px; width: 40px;height: 40px;border: 1px solid color(70);background-color: color(50);@include justify-content(center);
+        display: inline-flex;@include align-items(center);color: color(550);font-size: 18px;
+    }
+    @include media-breakpoint-down(xxl){
+        font-size: 22px;margin-bottom: 20px;
+        a{
+            width: 35px;height: 35px;font-size: 16px;margin-right: 10px;
+        }
+    }
+    @include media-breakpoint-down(xl){
+        font-size: 20px;
+    }
+    @include media-breakpoint-down(lg){
+        font-size: 18px;margin-bottom: 15px;
+        a{
+            width: 30px;height: 30px;font-size: 14px;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        font-size: 16px;
+    }
+}

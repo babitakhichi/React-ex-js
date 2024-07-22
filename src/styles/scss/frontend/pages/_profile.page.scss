@@ -1,0 +1,163 @@
+.profilePage{
+    padding: 60px 0 80px;
+    .headTop {
+        margin-bottom: 34px;
+    }
+    .profileCard{
+        &_img {
+            width: 182px; height: 182px; border-radius: 100%; position: relative;
+            img{width: 100%; height: 100%; object-fit: cover;}
+        }
+        &_upload{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            line-height: 30px;
+            background-image: linear-gradient(to bottom, color(450) , color(500));
+            border-radius: 50%;
+            text-align: center;
+            @include absolutecenter('x');
+            bottom: -15px;
+            em{font-size: 17px; color: color(50); line-height: 30px;}
+            input{position: absolute; z-index: -5; opacity: 0;}
+        }
+        &_imgAnt{
+            .ant-upload{
+                width: 182px; height: 182px; border-radius: 100%; position: relative; border: none; margin: 0;
+                img{border-radius: 50%; object-fit: cover; width: 100%;}
+                .anticon-loading{font-size: 30px; color: color(500) !important;}
+            }
+        }
+    }
+    .formBlock{
+        .backheading {
+            margin-bottom: 16px;
+        } 
+        .form-group{
+            margin-bottom: 30px;
+            label{
+                font-size: 14px;
+            }
+        }
+        // .form-control{
+        //     // background-color: color(70);
+        //     &-textBlock{
+        //         // background-color: color(70);
+        //     }
+        // }
+        .form-control{
+            .ReactFlagsSelect-module_selectFlag__2q5gC{
+                padding-right: 15px;
+                position: relative;
+                width: 45px;
+                justify-content: center;
+                &:after{
+                    content: "";
+                    height: 25px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    border-right: 1px solid #CECECE;
+                }
+            }
+            .ReactFlagsSelect-module_label__27pw9{
+                padding-left: 15px;
+            }
+        }
+        .changeLink{color: color(450); font-size: 14px; margin-top: 10px; display: inline-block;}
+    }
+    .paymentBox{
+        border: 1px solid color(70);
+    }
+    @media (max-width:1499px) {
+        padding: 30px 0;
+        .profileCard{
+            &_img {
+                width: 150px; height: 150px;
+            }
+            &_imgAnt{
+                .ant-upload{
+                    width: 150px; height: 150px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .headTop {
+            margin-bottom: 20px;
+        }
+        .profileCard{
+            &_img {
+                width: 120px; height: 120px;
+                .anticon-loading{font-size: 22px;}
+            }
+            &_upload{
+                width:25px; height:25px;
+                line-height:25px; bottom: -10px;
+                em{font-size: 14px; line-height: 24px;}
+            }
+            &_imgAnt{
+                .ant-upload{
+                    width: 120px; height: 120px;
+                }
+            }
+        }
+        .formBlock {
+            .form-group{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding: 20px 0;
+        .formBlock{
+            .form-group{margin-bottom: 15px;}
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .formBlock{
+            .form-control{
+                .ReactFlagsSelect-module_selectFlag__2q5gC{
+                    padding-right: 12px;
+                    width: 32px;
+                }
+                .ReactFlagsSelect-module_label__27pw9{
+                    padding-left: 12px;
+                }
+            }
+        }
+        .paymentBox {
+            h5 {
+                font-size: 15px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .formBlock{
+            .form-control{
+                .ReactFlagsSelect-module_selectFlag__2q5gC{
+                    width: 28px;
+                }
+            }
+        }
+        .profileCard{
+            padding-bottom: 20px;
+            &_img {
+                width: 80px; height: 80px;
+            }
+            &_upload{
+                width:25px; height:25px; line-height: 25px;
+                em{
+                    font-size: 12px; line-height: normal;
+                }
+            }
+            &_imgAnt{
+                .ant-upload{
+                    width: 80px; height: 80px;
+                }
+            }
+        }
+    }
+}

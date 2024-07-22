@@ -1,0 +1,338 @@
+.form-group{
+    margin-bottom: 22px;
+    .form-control{
+        height: 50px;
+        outline: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-family: font(rg);
+        color: color(700);
+        background-color: color(80);
+        font-size: 15px !important;
+        border-color: transparent;
+        &:focus {
+            border-color: color(500);
+            box-shadow: none;
+        }
+        &:disabled{
+            background-color: color(70);
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px color(80) inset !important;
+        }
+        @include placeholder{color: color(580);}
+    }
+    .form-control-wrap {
+        position: relative;
+        .form-icon {
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(20px + 40px);
+            height: 50px;
+            &:after{
+                content: "";
+                height: 25px;
+                @include absolutecenter(y);
+                right: 0;
+                border-right: 1px solid #CECECE;
+            }
+            em {
+                font-size: 20px;
+                color: color(500);
+            }
+            + .form-control {
+                padding-left: (60px + 15px);
+            }
+            &-right {
+                left: auto;
+                right: 1px;
+                + .form-control {
+                    padding-left: 15px;
+                    padding-right: (60px + 15px);
+                }
+                &:after{
+                    left: 0;
+                    right: auto;
+                    border-right: none;
+                    border-left: 1px solid #CECECE;
+                }
+            }
+        }
+    }
+    label {
+        font-size: 16px;
+        font-family: font(rg);
+        color: color(700);
+        margin-bottom: 8px;
+        em{font-size: 17px;}
+    }
+    textarea.form-control{height: auto; resize: none;}
+    .VerifyInput{
+        input{height: 56px;background-color: color(50);border-color: #DCDCDC;}
+        .ant-form-item{
+            flex: 1;
+            &:not(:last-child){margin-right: 10px;}
+        }
+        @media (max-width: 420px){
+          .ant-form-item{
+              &:not(:last-child){margin-right: 5px;}
+          }
+          input{height: 40px;}
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .form-control{
+            height: 45px;
+            padding: 5px 12px;
+        }
+        .form-control-wrap{
+            .form-icon{
+                height: 45px;width: 45px;
+                em{font-size: 16px;}
+                + .form-control {
+                    padding-left: (45px + 12px);
+                }
+            }
+        }
+        label{
+            margin-bottom: 6px;
+            font-size: 14px;
+            em{font-size: 15px;}
+        }
+        margin-bottom: 15px;
+    }
+    @include media-breakpoint-down(md){
+        .form-control{
+            height: 40px;
+            font-size: 14px !important;
+        }
+        .form-control-wrap{
+            .form-icon{
+                height: 40px;width: 40px;
+                em{font-size: 15px;}
+                + .form-control {
+                    padding-left: (40px + 12px);
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .form-control-wrap{
+            .form-icon{
+                em{font-size: 14px;}
+            }
+        }
+    }
+}
+
+.ant-checkbox-wrapper{
+    font-family: font(sb);
+    .ant-checkbox-checked{
+        .ant-checkbox-inner{
+            background-color: color(500);border-color:color(500);
+        }
+    }
+    .ant-checkbox-inner{
+        background-color: transparent;
+        &:after{left: 25%;}
+    }
+    &:hover{
+        .ant-checkbox{
+            &:after{border-color: color(500);}
+        }
+        .ant-checkbox-inner{border-color: color(500);}
+    }
+    &.dark{
+        .ant-checkbox-checked{
+            .ant-checkbox-inner{
+                background-color: color(550);border-color:color(550);
+            }
+        }
+        .ant-checkbox-inner{
+            background-color: transparent; border-color:color(550)
+        }
+        &:hover{
+            .ant-checkbox{
+                &:after{border-color: color(550);}
+            }
+            .ant-checkbox-inner{border-color: color(550);}
+        }
+    }
+    .ant-checkbox {
+        top: 5px;
+        &-inner{width: 20px;height: 20px;}
+    }  
+    @include media-breakpoint-down(xl){
+        .ant-checkbox {
+            top: 3px;
+            &-inner{width: 18px;height: 18px;}
+        } 
+    }
+    @include media-breakpoint-down(md){
+        font-size: 12px;
+    }
+    @include media-breakpoint-down(sm){
+        .ant-checkbox{
+            &+span{
+                padding-right: 2px;padding-left: 5px;
+            }
+        }
+    }
+}
+
+.ant-radio-wrapper{
+    .ant-radio-checked{
+        .ant-radio-inner{
+            border-color:color(500);
+            &::after{background-color: color(500);}
+        }
+        &::after{border: 1px solid color(500);}
+    }
+    .ant-radio{
+        &-inner{width: 20px;height: 20px;} 
+        &:hover{
+            .ant-radio-inner{border-color: color(500);}
+        }
+    }
+}
+.ReactFlagsSelect-module_flagsSelect__2pfa2{
+    &.country-flags{
+        > ul{
+            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+            border: none;
+            border-radius: 10px;
+            margin-top: 4px;
+        }
+    }
+    .form-control{
+        &:disabled{
+            &:after{display: none;}
+        }
+    }
+    .form-control, .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]{
+        &:after{
+            content: '\e901';
+            font-family: 'icomoon';
+            border: none !important;
+            position: absolute;
+            right: 20px;
+            top: 14px;
+            color: rgba(color(900), 0.5);
+            transition: all .5s;
+            width: auto;
+            height: auto;
+            display: initial;
+            margin-left: 0;
+        }
+    }
+    .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]{
+        &:after{transform: rotate(-180deg);}
+    }
+    .ReactFlagsSelect-module_filterBox__3m8EU{
+        input{border: 1px solid color(90); font-size: 14px; border-radius: 4px;padding: 6px 8px;}
+    }
+    .ReactFlagsSelect-module_selectValue__152eS{padding: 0;color: color(580);}
+    .ReactFlagsSelect-module_label__27pw9{color: color(700);}
+    @include media-breakpoint-down(xl){
+        &.country-flags{
+            > ul{
+                border-radius: 5px;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .form-control, .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]{
+            &:after{font-size: 14px;top: 12px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .form-control, .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]{
+            &:after{font-size: 12px;right: 16px;top: 10px;}
+        }
+    }
+}
+
+.mobileField{
+    &.react-tel-input {
+        .form-control{
+            width: 100%;
+            background-color: color(80);
+            height: 50px;
+            border-color: transparent;
+            padding-left: 60px;
+            &:focus{
+                border-color: color(500);
+                + .flag-dropdown {
+                    border-color: color(500) #e4e4e4 color(500) color(500);
+                }
+            }
+        }
+        .flag-dropdown {
+            transition: border-color .15s ease-in-out;
+            border-width: 1px;
+            border-color: transparent #e4e4e4 transparent transparent;
+            background-color: color(80);
+            .selected-flag{
+                width: 50px;
+                border-radius: 5px 0 0 5px !important;
+                &:hover, &:focus{
+                    background-color: color(80);
+                }
+                .arrow{
+                    border: none !important;
+                    left: 45px;
+                    &:after{
+                        content: '\e901';
+                        font-family: 'icomoon';
+                        position: absolute;
+                        right: 10px;
+                        top: -5px;
+                        font-size: 10px;
+                        color: rgba(color(900), 0.5);
+                        transition: all .5s;
+                    }
+                    &.up {
+                        &:after{transform: rotate(-180deg);}
+                    }
+                }
+            }
+            .country-list {
+                box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+                margin-top: 5px;
+            }
+            &.open{
+                .selected-flag{
+                    background-color: color(80);
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            .form-control{
+                height: 45px;
+                padding: 5px 12px 5px 60px;
+            }
+        }
+        @include media-breakpoint-down(md){
+            .form-control{
+                height: 40px;
+                font-size: 14px !important;
+            }
+        }
+    }
+}
+// switch design
+.ant-switch-checked{
+    background-color:color(500);
+    &:focus{box-shadow: none;}
+}
+.ant-switch{
+    margin-right: 12px;
+    &:focus{box-shadow: none;}
+}

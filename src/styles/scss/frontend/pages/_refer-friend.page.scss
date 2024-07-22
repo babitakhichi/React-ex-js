@@ -1,0 +1,271 @@
+.referPage {
+    color: color(550);
+    h2 {
+        font-size: 36px; font-family: font(eb); margin-bottom: 12px;
+        span {color: color(500); display: block;}
+    }
+    &_borderBox {
+        border: 2px solid color(500); border-radius: 5px;
+        background-color: color(50);
+        box-shadow: 0px 10px 20px rgba(#333333, 0.05); 
+        margin-top: 35px;
+    }
+    &_borderBoxTop {
+        background-color: rgba(color(500), 0.05); padding-top: 65px; padding-bottom: 65px; position: relative;
+        &::before {
+            content: '';
+            background: url("#{$imageurl}/refer-left.svg") no-repeat;
+            width: 240px;
+            height: 192px;
+            position: absolute;
+            left: 65px;
+            bottom: 0;
+            background-position:bottom;
+            background-size: contain;
+        }
+        &::after {
+            content: '';
+            background: url("#{$imageurl}/refer-right.svg") no-repeat;
+            width: 195px;
+            height: 230px;
+            position: absolute;
+            right: 65px;
+            bottom: 0;
+            background-position:bottom;
+            background-size: contain;
+        }
+        p{font-family: font(eb); font-size: 18px; margin-bottom: 0;}
+        &-content {
+            max-width: 332px;
+            .input-group {
+                margin-top: 30px; min-height: 60px; align-items: stretch;
+                .btn {height: auto;}
+            }
+            .form-control {
+                border: 1px solid color(500); font-size: 24px; font-family: font(bd); text-align: center; z-index: 5;
+                &:focus {
+                    outline: none; box-shadow: none;
+                }
+            }
+
+        }
+        .shareBox {
+            margin-top: 30px;
+            ul {
+                margin-top: 15px;
+                margin-bottom: 0; 
+                grid-gap: 13px;
+                li {
+                    border-radius: 100%;
+                    a {
+                        width: 44px; height: 44px;
+                        display: flex; align-items: center; justify-content: center;
+                        color: color(50); font-size: 20px;
+                    }
+                    &.fb {background-color: #3B5998;}
+                    &.tw {background-color: #03A9F4;}
+                    &.in {
+                        background: rgb(250,225,0);
+                        background: -moz-linear-gradient(145deg, rgba(250,225,0,1) 0%, rgba(252,183,32,1) 20%, rgba(255,121,80,1) 40%, rgba(255,28,116,1) 60%, rgba(108,28,209,1) 100%);
+                        background: -webkit-linear-gradient(145deg, rgba(250,225,0,1) 0%, rgba(252,183,32,1) 20%, rgba(255,121,80,1) 40%, rgba(255,28,116,1) 60%, rgba(108,28,209,1) 100%);
+                        background: linear-gradient(145deg, rgba(250,225,0,1) 0%, rgba(252,183,32,1) 20%, rgba(255,121,80,1) 40%, rgba(255,28,116,1) 60%, rgba(108,28,209,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fae100",endColorstr="#6c1cd1",GradientType=1);
+                    }
+                    &.ln {background-color: #0A66C2;}
+                    &.wt {background-color: #25D366;}
+                    &.em {background-color: #222222;}
+                }
+            }
+        }
+    }
+    &_borderBoxBottom {
+        padding-top: 50px; padding-bottom: 50px;
+        h2 {
+            font-size: 30px; margin-bottom: 35px; color: color(550);
+        }
+        h3 {
+            font-size: 20px; font-family: font(bd); margin-bottom: 10px; margin-top: 25px; margin-bottom: 10px; color: color(550);
+        }
+        p {
+            color: color(600); margin-bottom: 0;
+        }
+        &_row {
+            max-width: 1000px; margin: 0 auto;
+            .itemsBox {
+                padding: 0 28px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl) { 
+        h2 {
+            font-size: 32px;
+        }
+        &_borderBox {
+            margin-top: 20px;
+        }
+        &_borderBoxTop {
+            padding-top: 50px; padding-bottom: 50px;
+            &-content {
+                .input-group {
+                    min-height: 50px; margin-top: 20px;
+                }
+                .form-control {
+                    font-size: 20px;
+                }
+            }
+            .shareBox {
+                margin-top: 20px;
+                ul {
+                    grid-gap: 10px;
+                }
+            }
+        }
+        &_borderBoxBottom {
+            h2 {font-size: 26px;}
+            &_row {
+                .itemsBox {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        h2 {font-size: 26px;} 
+        &_borderBoxTop {
+            padding-top: 30px; padding-bottom: 30px;
+            &::before {
+                width:180px; height:150px; left: 40px;
+            }
+            &::after {
+                width: 150px; height: 160px; right: 40px;
+            }
+            &-content {
+                max-width: 290px;
+                .form-control {
+                    font-size: 18px;
+                }
+            }
+            .shareBox {
+                ul {
+                    li {
+                        a {
+                            width: 40px; height: 40px; font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        &_borderBoxBottom {
+            padding-top: 30px; padding-bottom: 30px;
+            h2 {
+                margin-bottom: 20px; font-size:22px;
+            }
+            h3 {font-size: 18px;}
+            &_row {
+                .itemsBox {
+                    img {max-height:50px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        &_borderBoxTop {
+            padding-top: 20px; padding-bottom: 20px;
+            p {font-size: 16px;}
+            &::before {
+                left: 20px;
+                width: 150px;
+                height: 120px;
+            }
+            &::after {
+                right: 20px;
+                width: 140px;
+                height: 140px;
+            }
+            &-content {
+                max-width: 270px;
+                .input-group {
+                    min-height: auto; margin-top: 10px;
+                }
+                .form-control {
+                    font-size: 16px;
+                }
+            }
+            .shareBox {
+                margin-top: 10px;
+                ul {
+                    margin-top: 10px;
+                    li {
+                        a {
+                            width:36px; height:36px; font-size:16px;
+                        }
+                    }
+                }
+            }
+        }
+        &_borderBoxBottom {
+            padding-top: 20px; padding-bottom: 20px;
+            h3 {
+                font-size: 16px; margin-top: 15px;
+            }
+            .itemsBox {
+                padding: 0 10px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        h2 {font-size: 22px;}
+        &_borderBoxTop {
+            &::before{
+                left: 10px; width: 120px; height: 100px;
+            }
+            &::after {
+                right: 10px; width: 120px; height: 120px;
+            }
+            &-content {
+                max-width: 250px;
+            }
+            .shareBox {
+                ul {
+                    grid-gap: 5px;
+                }
+            }
+        }
+        &_borderBoxBottom {
+            h2 {font-size: 20px;}
+            &_row {
+                justify-content: center;
+                .itemsBox {
+                    img {max-height: 45px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        h2 {font-size:  18px;}
+        &_borderBoxTop {
+            p {font-size: 14px;}
+            &::before, &::after {
+                display: none;
+            }
+        }
+        &_borderBoxBottom {
+            h2 {
+                font-size: 18px; margin-bottom: 15px;
+            }
+            h3 {
+                margin-top: 10px; margin-bottom: 7px;
+            }
+            .itemsBox {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    @media (max-width:399.99px) {
+        .backheading {
+            margin-bottom: 10px !important;
+        }
+    }
+}

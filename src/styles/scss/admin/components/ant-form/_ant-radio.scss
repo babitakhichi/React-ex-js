@@ -1,0 +1,29 @@
+$ant-checkbox-bg-active : $form-check-input-checked-bg-color;
+$ant-checkbox-border-active : $ant-checkbox-bg-active;
+.ant-radio{
+    &-wrapper{
+        &:hover{
+            .ant-radio-inner{
+                border-color: $ant-checkbox-border-active;
+            }
+        }
+    }
+    &-input{
+        &:focus{
+            &+.ant-radio-inner{
+                border-color: $ant-checkbox-border-active;
+            }
+        }
+    }
+    &-checked{
+        &:after{
+            border-color: $ant-checkbox-border-active;
+        }
+        .ant-radio-inner{
+            border-color: $ant-checkbox-border-active;
+            &:after{
+                background-color: $ant-checkbox-bg-active;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.notificationPage {
+  .notificaton {
+    &_list {
+      &_item {
+        padding: 15px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        &.noRead {
+          background: color(80);
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid color(80);
+        }
+        .userImg {
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .notifyMsg {
+          h6 {
+            font-size: 18px;
+            margin-bottom: 3px;
+            color: color(700);
+          }
+          p {
+            font-size: 15px;
+            color: color(650);
+          }
+          span {
+            font-size: 14px;
+            color: color(600);
+          }
+        }
+        &:hover {
+          background: color(80);
+        }
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      &_list {
+        &_item {
+          padding: 10px 8px;
+          .userImg {
+            img {
+              width: 45px;
+              height: 45px;
+            }
+          }
+          .notifyMsg {
+            h6 {
+              font-size: 16px;
+            }
+            p {
+              line-height: 1.2;
+            }
+            span {
+              font-size: 12px;
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &_list {
+        &_item {
+          padding: 8px;
+          .userImg {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .notifyMsg {
+            p {
+              font-size: 14px;
+            }
+            span {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

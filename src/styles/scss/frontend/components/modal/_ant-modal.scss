@@ -1,0 +1,25 @@
+.ant-modal{
+    &-content {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    &-title {
+        font-size: 18px;
+        font-family: font(bd);
+        text-transform: capitalize;
+    }
+    &-footer{
+        .ant-btn{
+            &-primary{
+                background: color(500);
+                border-color: color(500);
+            }
+            &-default{
+                &:hover{
+                    color: color(500);
+                    border-color: color(500);
+                }
+            }
+        }
+    }
+}

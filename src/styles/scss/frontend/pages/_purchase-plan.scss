@@ -1,0 +1,306 @@
+.purchasePlan{
+    .heading{
+        p{color:color(650);}
+    }
+    &_head{
+        padding-bottom: 40px;
+        .ant-select{
+            &.ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+                background-color: color(50);font-size: 18px; height: 44px;min-height: 44px;width: 155px;border-radius: 30px;
+                border:1px solid #CCCCCC;font-family: font(sb);padding-right: 45px;
+            }
+            &.ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item{
+                line-height: 44px !important; height: 44px;min-height: 44px;color:#575757;
+                padding-right: 0;
+            }
+            &-arrow{
+                height: 44px;font-size: 12px; top: 2px;
+                &:after{color:rgba(#000000, 0.5);}
+            }
+            &.ant-select-focused:not(.ant-select-disabled){
+                &.ant-select:not(.ant-select-customize-input){
+                    .ant-select-selector {
+                    box-shadow: none;
+                    outline: none;
+                    }
+                }
+            }
+        }
+    }
+    .nav-pills{
+        flex-wrap: nowrap;overflow-x: auto;
+        .nav-item{
+            white-space: nowrap;
+            &:not(:last-child){margin-right: 30px;}
+        }
+        .nav-link{
+            border: 0;color:#333333;padding:5px 5px 10px;position: relative; transition: all 0.5s;
+            img{margin-right: 10px;max-height: 24px;}
+            &:before{
+                width: 0;height: 2px;background-color: color(550);content: "";position: absolute;bottom:0;
+                left:0;transition: all 0.5s;
+            }
+            &:hover, &.active{
+                color:color(550);text-shadow: 0 0 .01px color(550), 0 0 .01px color(550);background-color:transparent;
+                &::before{width: 100%;}
+            }
+        }
+    }
+    .tabWithBg {
+        justify-content: center;
+        border: 1px solid #CCCCCC;
+        border-radius: 50px;
+        background: #F3F3F3 !important;
+        padding: 5px;
+        width: fit-content;
+        margin: 0 auto 40px;
+        .nav-item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+        .nav-link {
+            padding: 12px 45px; border-radius: 50px; font-size: 18px;
+            &::before {display: none;}
+            &.active {
+                background-image: linear-gradient(to right, #39F681, #19D1C5); font-family: font(bd);
+                &::before {display: none;}
+            }
+        }
+    }
+    &_wrap{
+        &Left{
+            width: 325px; 
+            padding: 35px 12px;
+            h2{font-size: 30px; min-height: 135px; padding-bottom: 30px; margin: 0; display: flex; align-items: center;}
+            li{margin-top: 30px; font-family: font(sb);color:color(800)}
+        }
+
+        &Right{
+            width:calc(100% - 330px);
+            .row{
+                margin: 0 -3px;
+                [class*="col"] {
+                    padding: 0 3px;
+                }
+            }
+            .planColumn{
+                cursor: pointer;
+                &-purchased{
+                    .planColumn_outer *{opacity: 0.7;}
+                }
+                &_outer{
+                    padding: 35px 12px;background:#FCFCFC;border-radius:5px;display:block;
+                    text-align: center;
+                    position: relative; transition: all 1s;
+                    &:after{transition: opacity 0.8s; content: ""; opacity: 0; }
+                }
+                .bottomBtn{
+                    opacity: 0; visibility: hidden; margin-top: 60px;
+                    .btn{
+                        &[disabled]{opacity: 0.5;}
+                    }
+                }
+                &:not(.planColumn-purchased).active{
+                    .planColumn_outer{
+                        &:after{
+                            content:"";background: #e8fff8;
+                            width:100%;height: 100%;top:0;bottom:0; left:0;right:0;
+                            position: absolute;border-radius: 5px;z-index: 1; opacity: 1;box-shadow:0 3px 30px 0 rgba(color(900), 0.06);
+                        }
+                    }
+                    .bottomBtn{opacity: 1; visibility: visible;}
+                }
+                &_head{
+                    padding:0 0 30px;border-bottom:1px solid rgba(color(650), 0.1); position: relative; z-index: 2;
+                    min-height: 135px; display: flex; flex-direction: column; justify-content: center;
+                    h2{font-size: 30px;color:color(550);font-family: font(eb); margin-bottom: 4px;}
+                    h3{
+                        font-size: 26px;font-family: font(bd); color:color(500); margin-bottom: 0;
+                        span{color:color(550); font-family: font(rg);font-size: 18px;}
+                    }
+                    .cutOffPrice{
+                        font-size: 20px; line-height: 1.35; font-family: font(bd); margin-bottom: 4px; display: block; text-decoration: line-through;
+                        color: rgba(color(550), 0.5);
+                    }
+                }
+                ul{
+                    position: relative; z-index: 2;
+                }
+                li{
+                    margin-top: 30px; font-family: font(sb);color:color(800);
+                    em{
+                        font-size: 14px;
+                        &.icon-check{
+                            background: linear-gradient(to right, #39F681 0%, #19D1C5 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                        &.icon-close{color:#DF6060;}
+                    }
+                }
+            }
+        }
+        .emptySec{
+            padding: 35px 12px;background: color(50); border-radius:5px; box-shadow:0 3px 30px 0 rgba(color(900), 0.06);
+        }
+    }
+    &_corporate{
+        margin-bottom: 60px;
+        p{font-size: 18px; color: #707070;}
+    }
+    @media(max-width:1599px){
+        &_wrap{
+            &Left{max-width: 300px; padding: 25px 0;
+                h2{font-size: 26px; min-height: 100px; padding-bottom: 15px;}
+                li{
+                   margin-top: 25px;
+                }
+            }
+            &Right{ width:calc(100% - 300px);
+                .planColumn{
+                    &_outer{
+                        padding: 25px 10px;
+                    }
+                    &_head{
+                        padding: 0 0 15px; min-height: 100px;
+                        h2{font-size: 26px;}
+                        h3{font-size: 22px;
+                            span{font-size: 16px;}
+                        }
+                        .cutOffPrice{font-size: 18px;}
+                    }
+                    li{margin-top: 25px;}
+                }
+                .bottomBtn{margin-top: 40px;}
+            }
+        }
+        .tabWithBg {
+            margin-bottom: 30px;
+            .nav-link {
+                font-size: 16px; padding: 10px 35px;
+            }
+        }
+        &_corporate{
+            margin-bottom: 50px;
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_wrap{
+            &Left{max-width: 265px; padding: 20px 0;
+                h2{font-size: 23px;}
+                li{
+                    margin-top: 20px;
+                }
+            }
+            &Right{width:calc(100% - 265px);
+                .planColumn{
+                    &_outer{
+                        padding: 20px 10px;
+                    }
+                    .bottomBtn{margin-top: 45px;}
+                    &_head{
+                        h2{font-size: 23px;}
+                        h3{font-size: 19px;
+                            span{font-size: 15px;}
+                        }
+                        .cutOffPrice{font-size: 16px;}
+                    }
+                    li{margin-top: 20px;}
+                }
+                .bottomBtn{margin-top: 30px;}
+            }
+            .emptySec{
+                padding: 20px 10px;
+            }
+        }
+        &_corporate{
+            margin-bottom: 40px;
+            p{font-size: 16px;}
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_head{
+            padding-bottom: 30px;
+        }
+        &_wrap{
+            &Left{
+                h2{font-size: 20px; min-height: 90px;}
+            }
+            &Right{
+                .row {flex-wrap: nowrap;
+                    [class*=col]{
+                        min-width: 200px;
+                    }
+                }
+                .planColumn{
+                    .bottomBtn{margin-top: 35px;}
+                    &_head{
+                        min-height: 90px;
+                        h2{font-size: 20px;}
+                        h3{font-size: 17px;}
+                        .cutOffPrice{font-size: 14px;}
+                    }
+                }
+            }
+        }
+        .tabWithBg {
+            margin-bottom: 20px; padding: 2px 3px;
+        }
+        &_corporate{
+            margin-bottom: 30px;
+        }
+    }
+    @include media-breakpoint-up(md){
+        .heading{
+            margin-bottom: 30px;
+        }
+        &_wrap{
+            &Right{
+                overflow-x: auto; padding: 0 3px 10px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_wrap{
+            overflow-x: auto; padding-bottom: 10px;
+        }
+        &_head{
+            padding-bottom: 20px;
+        }
+        .tabWithBg {
+            .nav-link {
+                padding: 8px 25px;
+            }
+        }
+        &_corporate{
+            margin-bottom: 20px;
+            p{font-size: 14px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .nav-pills{
+            margin-bottom: 15px;
+        }
+        &_wrap{
+            &Left{
+                h2{font-size: 18px; min-height: 80px; padding-bottom: 10px;}
+            }
+            &Right{
+                .planColumn{
+                    .bottomBtn{margin-top: 25px;}
+                    &_head{
+                        padding: 0 0 10px; min-height: 80px;
+                        h2{font-size: 18px;}
+                        h3{font-size: 15px;
+                            span{font-size: 14px;}
+                        }
+                    }
+                }
+            }
+            .emptySec{
+                padding: 10px;
+            }
+        } 
+    }
+}

@@ -1,0 +1,295 @@
+.footerSec{
+    background-color: color(550); color: color(50);
+    padding-top: 65px; 
+    h2{
+        color:color(50); font-size:26px; font-family:font(bd);
+        line-height:35px; margin-bottom:10px;
+    }
+    p {
+        font-size: 14px; line-height: 24px; margin-bottom: 20px;
+    }
+    .logo-img {
+        margin-right: 30px;
+    }
+    .list-group{
+        &-item{
+            background-color: transparent; border: 0;
+            &:not(:last-child){ margin-right: 22px;}
+            a {
+                color: color(50); @include flexbox();
+                &:hover {color: color(500);}
+            }
+        }
+    }
+    .info {
+        &-about {
+            padding-right: 20px;
+        }
+        &-form {
+            max-width: 392px;
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+        &-getinTouch{
+            padding-left: 70px;
+            p { font-size: 16px;}
+            .btn{
+                font-size: 18px; min-width: 175px;
+            }
+        }
+        .form-group{
+            border-radius: 60px;
+            border: 1px solid color(500);
+            padding: 10px; position: relative;
+            .btn {
+                position: absolute; right: 10px; top: 10px;
+                font-size: 18px; color: color(550); border: 0;
+                min-width: auto; padding: 0px 25px; max-height: 40px;
+                &:hover{ background-color: color(500); color: color(50);}
+            }
+            .ant-form-item-explain.ant-form-item-explain-connected {
+                position: absolute;
+                top: calc(100% + 12px);
+            }
+        }
+        .form-control {
+            background-color: transparent; border: 0; font-size: 14px;
+            color: color(50); height:40px; text-align: left !important;
+            max-width: 240px;
+            &::placeholder{
+                color: rgba($color: color(50), $alpha: 0.5);
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active{
+                -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                transition: background-color 5000s ease-in-out 0s;
+                -webkit-text-fill-color: color(50);
+            }
+        }
+    }
+    .copyRight{
+        padding-top: 60px; padding-bottom: 30px;
+        P{font-size: 15px;}
+        a { font-size: 15px;}
+    }
+    .downloadSec{
+        background-image: url("../#{$imageurl}/green-bg.png");
+        background-position: center; background-size: cover;  max-height: 320px;
+        border-radius: 20px;  color: color(550); padding: 35px 70px 40px 50px;
+        position: absolute; left:0; right:0; bottom: calc(100% - 95px);
+        h2 {font-size:36px; line-height: 1.2; font-family: font(rg); color: color(550); }
+        h3{font-size: 48px; font-family: font(eb); color: color(550);}
+        p{font-size: 16px; line-height: 1.9;}
+        &_imgBox{
+            bottom:0; padding-right:15px;
+        }
+        &_info{ padding-left:75px;}
+    }
+    @media (max-width:1599px) {
+        .downloadSec {
+            h2 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 40px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        padding-top: 40px;
+        .logo-img {
+            margin-right: 20px; max-width: 80px;
+        }
+        h2 {
+            line-height: 28px; font-size: 20px; 
+        }
+        p{
+            line-height: 20px; margin-bottom: 10px;
+        } 
+        .info{
+            &-about {
+                padding-right: 20px;
+            }
+            &-form{
+                h2 {margin-bottom: 10px;}
+            }
+            &-getinTouch{
+                padding-left:20px;
+                .btn{font-size:16px;}
+                p{font-size: 14px; margin-bottom: 10px;}
+            }
+            .form-group{ 
+                padding:5px;
+                .form-control{max-width:220px;}
+                .btn{font-size:16px; right:5px; top:5px;}
+            }
+        }
+        .list-group{
+            &-item{
+                &:not(:last-child){ margin-right: 15px;}
+                a {font-size: 14px;} 
+            }
+        }
+        .copyRight{
+            padding-top: 30px;
+            padding-bottom: 20px;
+            p {
+                font-size: 14px;
+            }
+            a{
+                font-size: 14px;
+            }
+        }
+        .downloadSec {
+            padding: 30px;
+            h2 {
+                font-size:26px;
+            }
+            h3 {
+                font-size: 36px;
+            }
+            p {
+                line-height: 24px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding-top: 20px;
+        h2 {
+            line-height: 24px; font-size: 18px; 
+        }
+        .logo-img {
+            margin-right: 10px; max-width: 60px;
+        }
+        .info {
+            &-about{
+                padding-right: 0;
+            }
+            &-getinTouch {
+                padding-left: 0;
+                .btn{font-size: 14px;}
+            }
+            .form-group {
+                .btn{font-size: 14px; padding-inline: 15px;}
+                .form-control{
+                    max-width: 185px;
+                    font-size: 14px !important;
+                    padding-inline: 8px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        h2 {
+            font-size: 16px; 
+            line-height: 20px;
+        }
+        .footerItem  {
+            padding-bottom: 20px;
+        }
+        .info{
+            .form-group{
+                .form-control{
+                    height: 35px;
+                    max-width: 250px;
+                }
+                .btn{
+                    height: 35px;
+                }
+                .ant-form-item-explain.ant-form-item-explain-connected {
+                    top: calc(100% + 5px);
+                }
+            }
+            &-getinTouch{
+                .btn{min-width: inherit;}
+            }
+        }
+        .copyRight {
+            padding-top: 15px; padding-bottom: 15px;
+        }
+        .downloadSec {
+            h2 {
+                font-size:22px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+            p {
+                line-height: 20px;
+            }
+            &_info{padding-left: 0; text-align: center;}
+        }
+    }
+    @include media-breakpoint-down(md){
+        .logo-img {
+            max-width: 40px;
+        }
+        .footerItem{
+            flex-direction: column;
+            img {
+                margin: 0 auto 10px;
+            }
+        }
+        .info{
+            text-align: center;
+            &-form{
+                max-width: inherit;
+            }
+            &-about{
+                ul{justify-content: center;}
+            }
+            .form-group{
+                .form-control{max-width: inherit; padding-right: 100px;}
+            }
+        }
+        .copyRight {
+            text-align: center;
+            p {padding-bottom: 5px;}
+        }
+        .downloadSec {
+            padding: 15px;
+            h2 {
+                font-size:20px;
+            }
+            h3 {
+                font-size: 26px;
+            }
+            p {
+                line-height: 16px;
+            }
+        }
+
+    }
+    @include media-breakpoint-down(sm){
+        h2 {margin-bottom: 5px;}
+        .copyRight {
+            p, a {
+                font-size: 12px;
+            }
+            .list-group{
+                flex-wrap: wrap;
+                &-item{
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+        .downloadSec {
+            h2 {
+                font-size:16px;
+            }
+            h3 {
+                font-size: 22px;
+            }
+            p {
+                line-height: 14px;
+            }
+        }
+    }
+}
+

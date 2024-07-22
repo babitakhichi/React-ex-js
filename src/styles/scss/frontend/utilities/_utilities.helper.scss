@@ -1,0 +1,64 @@
+// Fonts
+.font-lt {font-family: font(lt) !important;}
+.font-rg {font-family: font(rg) !important;}
+.font-sb {font-family: font(sb) !important;}
+.font-bd {font-family: font(bd) !important;}
+.font-eb {font-family: font(eb) !important;}
+.font-blk {font-family: font(blk) !important;}
+.font-ad {font-family: font(ad) !important;}
+
+.link-primary {
+  color: color(500) !important;
+  &:hover, &:focus {
+    color: darken(color(500), $amount: 6%) !important;
+  }
+}
+.text-500{color:color(500) !important}
+
+.py-70{
+  padding: 70px 0;
+  @media (max-width: 1599px){
+    padding: 50px 0;
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 30px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+}
+.pt-160{
+  padding-top: 160px;
+  @include media-breakpoint-down(xl){
+      padding-top: 130px;
+  }
+}
+.downloadSecComing{
+  padding-bottom: 290px;
+  @media (max-width: 1499px){
+    padding-bottom: 260px;
+  }
+  @include media-breakpoint-down(xxl){
+    padding-bottom: 240px;
+  }
+  @include media-breakpoint-down(lg){
+    padding-bottom: 180px;
+  }
+  @include media-breakpoint-down(md){
+    padding-bottom: 140px;
+  }
+}
+.f-14{
+  font-size: 14px !important;
+  @include media-breakpoint-down(sm){
+    font-size: 12px !important;
+  }
+}
+.mw-auto{min-width: auto !important;}
+.icon-notverified{color: #EF0F0F;}

@@ -1,0 +1,232 @@
+.paymentMethod{
+    // Payment Mode Sec
+    .paymentMode{
+        &_cnt{
+            &_details{max-width: 575px;}
+            h3{font-size: 22px;margin-bottom: 30px;color: color(550);}
+            .paymentCards{
+                &:not(:last-child){margin-right: 50px; margin-bottom: 15px;}
+                    p{font-size: 16px;font-family: font(sb);
+                        span{font-size: 14px;}
+                    }
+                    a{margin-left: 25px;font-size: 16px;color: color(550);}
+            }
+            .affirmative{
+                margin-bottom: 20px;color: #999999;margin-top: 40px;
+                p{font-size: 14px;
+                    &:not(:last-child){margin-bottom: 15px;}
+                }
+                li{ margin-bottom: 5px;
+                    &:not(:last-child){margin-right: 40px;}
+                    span{font-size: 18px;font-family: font(sb);color: color(600);}
+                }
+            }
+            .refundOption{
+                margin: 25px 0 20px;
+                .ant-radio{
+                    &-group{
+                        li{
+                            &:not(:last-child){margin-right: 30px;}
+                        }
+                    }
+                    &-wrapper{
+                        font-size: 14px; font-family: font(sb); color: #333333; line-height: 1.7; margin: 0;
+                        .ant-radio{top: 5px;}
+                    }
+                }
+            }
+            .internetBanking{
+                &_select{
+                    margin-bottom: 30px;
+                    .txt{font-size: 18px;margin-left: 15px;color: color(550)}
+                    img{margin-left: 15px;width: 60px;height: 60px;border: 1px solid #DFDFDF;border-radius: 50%;object-fit: contain;display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+            .selectupi{
+                .form-control{
+                    background-clip: border-box;border-radius: 5px 0 0 5px;border-right: 1px solid rgba(#707070,0.2);
+                    &:focus{
+                        border-color: color(500);border-right: 1px solid color(500);
+                    }
+                }
+                .ant-select{color: color(550);
+                    &.ant-select-single {
+                        &:not(.ant-select-customize-input){
+                            .ant-select-selector{ border-radius: 0 5px 5px 0;}
+                        }
+                    }
+                }
+            }
+            textarea{
+                min-height: 90px;
+            }
+            .ant-form-item{
+                margin-bottom: 0;
+            }
+           
+        }
+        &_right{
+            width: 350px;
+            padding-left: 20px;
+            flex-shrink: 0;
+            .paymentBox{
+                + .paymentBox{
+                    margin-top: 20px;
+                }
+                &_summary{
+                    margin: 30px 0;
+                    li{
+                        padding: 9px 0;
+                        &:first-child{padding-top: 0;}
+                        display: flex; justify-content: space-between; font-size: 14px;
+                        span{font-size: 16px; width: 50%; flex-shrink: 0; text-align: right; font-family: font(bd);}
+                        &.totalPayment{
+                            border-top: 1px solid #BEE5CD;
+                            padding-top: 15px;
+                        }
+                    }
+                }
+                &_infoIcon{font-size: 16px; color: color(550);}
+            }
+        }
+        @include media-breakpoint-down(xxl){
+            &_cnt{
+                h3{font-size: 20px;margin-bottom: 20px;}
+                .paymentCards{
+                    &:not(:last-child){margin-right: 35px; margin-bottom: 10px;}
+                    p{font-size: 14px;
+                        span{font-size: 13px;}
+                    }
+                    a{margin-left: 20px;}
+                }
+                .affirmative{margin-top: 20px;
+                    li{
+                        &:not(:last-child){margin-right: 20px;}
+                        span{font-size: 16px;}
+                    }
+                }
+                .internetBanking{
+                    &_select{
+                        margin-bottom: 20px;
+                        img{margin-left: 10px;width: 50px;}
+                        .txt{font-size: 16px;margin-left: 10px;}
+                    }
+                }
+                .refundOption{
+                    margin: 20px 0;
+                    .ant-radio{
+                        &-group{
+                            li{
+                                &:not(:last-child){margin-right: 20px;}
+                            }
+                        }
+                    }
+                }
+            }
+            &_right{
+                width: 320px;
+                .paymentBox{
+                    &_summary{
+                        margin: 20px 0;
+                        li{
+                            padding: 7px 0; font-size: 13px;
+                            span{font-size: 14px;}
+                            &.totalPayment{
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xl){
+            &_cnt{
+                &_details{max-width: 100%;}
+                h3{font-size: 18px;margin-bottom: 15px;}
+                .paymentCards{
+                    &:not(:last-child){margin-right: 25px;}
+                }
+                .affirmative{ margin: 15px 0;
+                    p{
+                        &:not(:last-child){margin-bottom: 10px;}
+                    }
+                    li{
+                        span{font-size: 14px;}
+                    }
+                }
+                .internetBanking{
+                    &_select{
+                        margin-bottom: 15px;
+                        .txt{font-size: 15px;}
+                    }
+                }
+            }
+            &_right{
+                width: 100%;
+                padding-left: 0;
+                margin-top: 20px;
+                .paymentBox{
+                    + .paymentBox{margin-top: 12px;}
+                    &_summary{
+                        margin: 15px 0;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            &_cnt{margin-top: 20px;
+                textarea{
+                    min-height: 70px;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm){
+            &_cnt{
+                h3{font-size: 16px;margin-bottom: 10px;}
+                .paymentCards{
+                    &:not(:last-child){margin-right: 15px;}
+                }
+                .affirmative{ margin: 10px 0;
+                    li{
+                        &:not(:last-child){
+                            margin-right: 10px;
+                        }
+                    }
+                    p{
+                        &:not(:last-child){margin-bottom: 5px;}
+                    }
+                }
+                .internetBanking{
+                    &_select{ margin-bottom: 10px;
+                        img{margin-left: 5px;width: 40px;}
+                        .txt{font-size: 14px;margin-left: 7px;}
+                    }
+                }
+            }
+            &_right{
+                margin-top: 15px;
+                .paymentBox{
+                    &_summary{
+                        margin: 5px 0 10px;
+                        li{padding: 5px 0;}
+                    }
+                }
+            }
+        }
+        @media (max-width:415px){
+            &_cnt{
+                .internetBanking{
+                    .row{
+                        [class*="col-"]{
+                            flex: 0 0 100%;
+                        }
+                    }
+                }
+                .paymentCards{margin-bottom: 7px;}
+            }
+        }
+    }
+}

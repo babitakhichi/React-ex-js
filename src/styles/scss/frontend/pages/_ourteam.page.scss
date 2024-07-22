@@ -1,0 +1,134 @@
+.ourTeamSec {
+    &_card {
+        border: 2px solid color(500);
+        padding:35px; border-radius:5px;
+        @include box-shadow(0px, 10px, 20px, rgba(#333333, 0.05));
+        background-color: color(50); height: 100%;
+        img {
+            height: 180px; width: 180px;
+            border-radius: 100%;
+            border: 4px solid color(500);
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px; font-family: font(eb); color: color(550);
+        }
+        .designation {
+            font-family: font(sb); margin-bottom: 20px; color: color(500); display: block;
+            max-width: 265px; margin-left: auto; margin-right: auto;
+        }
+        p {margin-bottom: 0;}
+    }
+    @media(max-width:1599px){
+        &_card {
+            img {
+                height: 150px;  width: 150px; 
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl) {
+        &_card {
+            padding:25px;
+            img {border-width: 2px; height: 120px; width: 120px;  margin-bottom: 15px;}
+            h2 {font-size:20px;}
+            .designation {margin-bottom:10px;}
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        &_card {
+            padding: 15px;
+            img {
+                height:100px; width:100px; 
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        &_card {
+            img {width: 80px; height: 80px;}
+            h2 {font-size: 18px;}
+            .designation {font-size: 15px;}
+            p {font-size: 15px;}
+        }
+    } 
+    @include media-breakpoint-down(sm) {
+        &_card {
+            img {width: 60px; height: 60px;}
+            h2 {font-size: 16px; margin-bottom: 5px;}
+            .designation {font-size: 14px; margin-bottom: 5px;}
+        }
+    }
+}
+.visionSec {
+    .sliderItem {
+        padding: 33px; border-radius: 5px; background-color: color(50);
+        @include box-shadow(0px, 10px, 20px, rgba(#333333, 0.05));
+        &_head {margin-bottom:30px;}
+        &_imgBox {
+            width: 95px; height: 95px; background-color: rgba(#E9E9E9, 0.82); border-radius: 100%; overflow: hidden;
+            border: 2px solid rgba(#DCDCDC, 0.5);
+            img {width: 100%; height: 100%; object-fit: cover;}
+        }
+        &_infoBox {
+            padding-left: 30px; width: calc(100% - 95px);
+            h3 {
+                font-size: 24px; font-family: font(eb); color: color(550);
+            }
+        }
+        p {margin-bottom: 0; color: color(650);}
+    }
+    .slick-list {padding-bottom: 50px; margin: 0 -15px;}
+    .slick-dots {bottom: 0;}
+    .slick-slide {
+        & > div {
+            padding: 0 15px;
+        }
+    }
+    @include media-breakpoint-down(xxl) {
+        .sliderItem {
+            padding: 25px;
+            &_head {
+                margin-bottom: 15px;
+            }
+            &_imgBox {
+                width:80px; height:80px;
+            }
+            &_infoBox {
+                padding-left: 20px; width: calc(100% - 80px);
+                h3{font-size: 20px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        .sliderItem {
+            padding: 15px;
+        } 
+        .slick-list {
+            margin: 0 -10px; padding-bottom: 40px;
+        }
+        .slick-slide > div {
+            padding: 0 10px;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        .sliderItem {
+            &_infoBox {
+                h3 {font-size: 18px; line-height: normal;}
+            }
+            p {font-size: 15px;}
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .sliderItem {
+            &_head {
+                margin-bottom: 5px;
+            }
+            &_imgBox {
+                width: 60px; height: 60px; flex-shrink: 0;
+            }
+            &_infoBox {
+                padding-left: 10px;
+                h3 {margin-bottom: 0; font-size: 16px;}
+            }
+        }
+    }
+}

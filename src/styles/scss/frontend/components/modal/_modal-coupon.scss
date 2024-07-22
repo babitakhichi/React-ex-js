@@ -1,0 +1,170 @@
+.couponModal{
+    .check{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        padding: 5px 25px;
+        display: flex;
+        align-items: center;
+    }
+    .modalForm{
+        .form-group{margin-bottom: 35px;}
+        .btn-primary{
+            min-width: auto;
+            flex-shrink: 0;
+        }
+        &_coupon{
+            max-height: 300px;
+            overflow: auto;
+            margin-right: -40px;
+            padding-right: 40px;
+        }
+    }
+    .couponBox{
+        &:not(:last-child){
+            margin-bottom: 25px;
+        }
+        .title{
+            h4{
+                font-size: 20px;
+                font-family: font(bd);
+                margin-bottom: 6px;
+                line-height: 1.1;
+            }
+            &_code{
+                border: 2px dashed #B9B9B9;
+                padding: 5px 12px;
+                font-size: 20px;
+                font-family: font(bd);
+                margin: 12px 0;
+                color: #999999;
+                min-width: 150px;
+                text-align: center;
+                text-transform: uppercase;
+                background: #F0F0F0;
+            }
+            p{
+                color: #A4A4A4;
+                font-size: 14px;
+            }
+        }
+        button:disabled,
+        button[disabled]{
+            opacity: 1;
+            background-color: #999999;
+            background-image: none;
+            color: color(50) !important;
+        }
+        &.active{
+            .title{
+                &_code{
+                    color: color(500);
+                    border-color: color(500);
+                    background: #EFFFFB;
+                }
+            }
+        }
+    }
+    .modalFooter{
+        h5{
+            font-size: 14px;
+            margin-bottom: 0;
+            color: color(650);
+        }
+        p{
+            font-size: 16px;
+            font-family: font(bd);
+        }
+    }
+    .modalFooter{
+        box-shadow:0 0 6px 0 rgba(color(900), 0.10);border-radius: 5px;padding: 20px 40px;
+        margin: 35px -40px -40px;
+    }
+    @include media-breakpoint-down(xxl){
+        .modalForm{
+            .form-group{margin-bottom: 25px;}
+            &_coupon{
+                margin-right: -20px;
+                padding-right: 20px;
+            }
+        }
+        .couponBox{
+            .title{
+                h4{
+                    font-size: 18px;
+                }
+                &_code{
+                    font-size: 18px;
+                    margin: 10px 0;
+                    min-width: 120px;
+                }
+            }
+        }
+        .modalFooter{
+            padding: 15px 20px;
+            margin: 25px -20px -20px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .check{
+            padding: 5px 15px;
+        }
+        .modalForm{
+            .form-group{margin-bottom: 20px;}
+            &_coupon{
+                margin-right: -15px;
+                padding-right: 15px;
+            }
+        }
+        .couponBox{
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            .title{
+                h4{
+                    font-size: 16px;
+                }
+                &_code{
+                    font-size: 16px;
+                    min-width: auto;
+                }
+            }
+        }
+        .modalFooter{
+            padding: 15px;
+            margin: 20px -15px -15px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        .couponBox{
+            .title{
+                h4{
+                    font-size: 15px;
+                }
+                &_code{
+                    font-size: 15px;
+                    padding: 5px 8px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .couponBox{
+            .title{
+               margin-bottom: 8px;
+            }
+        }
+        .modalForm{
+            &_coupon{
+                margin-right: -10px;
+                padding-right: 10px;
+            }
+        }
+        .modalFooter{
+            .btn{min-width: 100px;}
+            padding: 10px;
+            margin: 20px -10px -10px;
+        }
+    }
+}

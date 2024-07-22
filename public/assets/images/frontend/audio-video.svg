@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff6c65"/>
+      <stop offset="1" stop-color="#fbc285"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_165566" data-name="Group 165566" transform="translate(-536 -3929.01)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="30" cy="30" r="30" transform="translate(536 3929.01)" fill="url(#linear-gradient)"/>
+    <g id="Group_165324" data-name="Group 165324" transform="translate(543.087 3939.773)">
+      <g id="Icon_ionic-ios-videocam" data-name="Icon ionic-ios-videocam" transform="translate(5 9)">
+        <path id="Path_122282" data-name="Path 122282" d="M32.647,10.8a1.366,1.366,0,0,0-.744.216l-6.917,4.366a.684.684,0,0,0-.32.576v6.078a.684.684,0,0,0,.32.576L31.9,26.978a1.437,1.437,0,0,0,.744.216H34.31a.681.681,0,0,0,.688-.68V11.48a.686.686,0,0,0-.688-.68Z" transform="translate(0.829 -8.753)" fill="#fff"/>
+        <path id="Path_122283" data-name="Path 122283" d="M21.563,29.473H6.368a4.132,4.132,0,0,1-4.118-4.11V13.11A4.125,4.125,0,0,1,6.36,9H21.555a4.125,4.125,0,0,1,4.11,4.11V25.354A4.114,4.114,0,0,1,21.563,29.473Z" transform="translate(-2.25 -9)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

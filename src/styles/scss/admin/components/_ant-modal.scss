@@ -1,0 +1,16 @@
+.ant-modal{
+    &-footer{
+        .ant-btn{
+            &-primary{
+                background: $primary;
+                border-color: $primary;
+            }
+            &-default{
+                &:hover{
+                    color: $primary;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+}

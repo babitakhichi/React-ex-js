@@ -1,0 +1,70 @@
+.paymentBox{
+    background: #EBFDF2;
+    padding: 30px 25px; border-radius: 5px;
+    h5{
+        em{font-size: 24px; margin-right: 10px;}
+        color: color(550); font-size: 18px;
+    }
+    &-coin{
+        &:after{
+            background: url('#{$imageurl}/coin-icon.png');
+            content: "";
+            position: absolute;
+            width: 68px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 0;
+            right: 0;
+        }
+        h6{
+            font-size: 20px; color:#333333; margin: 8px 0 5px; line-height: 1.25;
+            span{font-size: 16px; font-family: font(sb);}
+        }
+        p{
+            font-size: 14px; color: #333333; margin-bottom: 10px;
+            span{font-size: 16px;}
+        }
+    }
+    &-corporate {
+        position: sticky; top: 100px;
+    }
+    @include media-breakpoint-down(xxl){
+        padding: 20px;
+        h5{
+            em{font-size: 20px;}
+        }
+        &-coin{
+            &:after{
+                width: 50px;
+            }
+            h6{
+                font-size: 18px;
+                span{font-size: 14px;}
+            }
+        }
+        &-corporate {
+            position: sticky; top:90px;
+        }
+    }
+    @include media-breakpoint-down(xl){
+      padding: 15px;
+      h5{font-size: 16px;}
+        &-coin{
+            h6{font-size: 16px;}
+            p{span{font-size: 14px;}}
+        }
+        &-corporate {
+            position: inherit;
+        }
+    }
+    @include media-breakpoint-down(sm){
+      padding: 12px;
+      h5{font-size: 15px;}
+      &-coin{
+          &:after{
+              width: 40px;
+          }
+      }
+    }
+  }

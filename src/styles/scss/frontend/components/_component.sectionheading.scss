@@ -1,0 +1,59 @@
+// sections Heading
+.heading{
+    max-width: 920px;
+    margin-bottom: 50px;
+    &_sub{
+      font-size: 36px;color:color(450);
+    }
+    &_main{
+      font-size: 48px;font-family: font(eb); color:color(550); position: relative;padding-bottom: 15px;
+      &::before{
+          position: absolute; left:0; content: '';background-image: url("#{$imageurl}/heading-border.png");
+          bottom:0;width: 116px;height: 6px;
+      }
+    }
+    &.text-center{
+        .heading_main{
+            &::before{
+                left: 0; right: 0; margin: 0 auto;
+            }
+        }
+    }
+    p{color: color(650);
+        +p{margin-top: 20px;}
+    }
+    @media(max-width:1599px){
+        &_sub{font-size: 32px;}
+        &_main{
+            font-size: 42px;padding-bottom: 10px;
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        max-width: 750px;
+        margin-bottom: 40px;
+        &_sub{font-size: 28px;}
+        &_main{font-size: 36px;}
+    }
+    @include media-breakpoint-down(xl){
+        max-width: 650px;
+        &_sub{font-size: 25px;}
+        &_main{font-size: 30px;}
+    }
+    @include media-breakpoint-down(lg){
+        max-width: 600px;margin-bottom: 30px;
+        &_sub{font-size: 22px;margin-bottom: 5px;}
+        &_main{font-size: 24px;}
+    }
+    @include media-breakpoint-down(md){
+        &_sub{font-size: 20px;}
+        &_main{font-size: 20px;}
+        p{font-size: 15px;
+            +p{ margin-top: 15px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        margin-bottom: 20px;
+        &_sub{font-size: 16px;}
+        &_main{font-size: 18px;}
+    }
+}

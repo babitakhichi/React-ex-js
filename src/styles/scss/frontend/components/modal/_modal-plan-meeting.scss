@@ -1,0 +1,112 @@
+.planMeetingModal {
+  .form-group {
+    .form-label {
+      font-size: 14px;
+    }
+    .form-control {
+      background-color: color(50);
+      font-family: font(sb);
+      border-color: #dcdcdc;
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px color(50) inset !important;
+      }
+      @include placeholder {
+        color: color(650);
+      }
+    }
+    .form-control-wrap {
+      .form-icon {
+        em {
+          color: color(550);
+        }
+      }
+    }
+    .ant-select {
+      &.ant-select-single {
+        &:not(.ant-select-customize-input) {
+          .ant-select-selector {
+            background-color: color(50);
+            border-color: #dcdcdc;
+            font-family: font(sb);
+          }
+          .ant-select-selection-placeholder {
+            color: color(650);
+          }
+        }
+      }
+      &.ant-select-multiple {
+        .ant-select-selector {
+          background-color: color(50);
+          border-color: #dcdcdc;
+          font-family: font(sb);
+        }
+      }
+    }
+    .ant-radio-group {
+      label {
+        margin: 0;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 26px;
+    }
+    @include media-breakpoint-up(lg) {
+      &.startDate {
+        width: 163px;
+      }
+      &.startTime {
+        flex: 1;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      .form-control-wrap {
+        .form-icon {
+          width: calc(20px + 25px);
+          + .form-control {
+            padding-left: (40px + 15px);
+          }
+          &-right {
+            + .form-control {
+              padding-right: (40px + 15px);
+            }
+          }
+        }
+      }
+      .ant-picker {
+        &.form-control {
+          padding-left: (40px + 15px);
+        }
+      }
+      .ant-form-item {
+        .form-icon {
+          &-left + .ant-select .ant-select-selector {
+            padding-left: calc(40px + 15px);
+          }
+          &-left
+            + .ant-select.ant-select-multiple
+            .ant-select-selection-placeholder,
+          &-left + .ant-select.ant-select-single .ant-select-selection-search {
+            left: calc(40px + 15px);
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      &.startDate,
+      &.startTime {
+        width: 50%;
+      }
+    }
+    @media (max-width: 360px) {
+      &.startDate {
+        width: 145px;
+      }
+      &.startTime {
+        flex: 1;
+      }
+    }
+  }
+}

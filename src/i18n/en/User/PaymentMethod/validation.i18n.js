@@ -1,0 +1,20 @@
+export const validation = {
+  upiId: "UPI ID is required",
+  description: "Description is required",
+  cardNumber: "Please enter card number",
+  cardHolder: "Please enter name",
+  expireDate: "Please enter expiry date",
+  cvv: "Please enter CVV",
+  validName: "Card holder name should be in the alphabets",
+  maxCardNo: "Card number must be 14 to 16 digits",
+  maxCvv: "CVV number must be 3 to 4 digits",
+  validExpire: "Enter valid expire date",
+  documentType: "Document Type is required",
+  paymentType: "Payment Type is required",
+  category: "Category is required",
+  refundType: "Refund Type is required",
+  documentUpload: "Please  upload the document",
+  noLicenses: "Number of Licenses is required",
+  minLicenses: "Number of Licenses must be greater then 0 ",
+  invalidLicenses:"Number of Licenses is Invalid"
+};

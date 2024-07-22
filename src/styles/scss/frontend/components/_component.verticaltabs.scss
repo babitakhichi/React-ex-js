@@ -1,0 +1,51 @@
+.verticalTabs{
+    .nav{
+        border: 1px solid color(70);border-radius: 5px;background-color: color(50);
+        &-item{
+            &:not(:last-child){border-bottom: 1px solid #E6E6E6;}
+        }
+        &-link{
+            font-size: 18px;line-height: 25px;color: color(700) !important;padding: 23px 30px;position: relative;
+            em{padding-right: 15px;font-size: 20px;color: color(550)}
+            &.active{
+                background-color:rgba(#1DD6BD,0.21);border-radius: 0;font-family: font(sb);
+                em{
+                    background: rgb(57,246,126);
+                    background: -moz-linear-gradient(180deg, rgba(57,246,126,1) 0%, rgba(25,209,197,1) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(57,246,126,1) 0%, rgba(25,209,197,1) 100%);
+                    background: linear-gradient(180deg, rgba(57,246,126,1) 0%, rgba(25,209,197,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#39f67e",endColorstr="#19d1c5",GradientType=1);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;font-weight: bolder;
+                }
+                &::after{
+                    position: absolute;left: 0;top:0;width: 3px;height: 100%;background-color: #1DD6BD;content: "";border-radius: 5px 0 0 0;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .nav{
+            &-link{
+                font-size: 16px;line-height: normal;padding: 20px 15px;
+                em{padding-right: 10px;font-size: 18px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .nav{
+            &-link{
+                font-size: 15px;padding: 15px 10px;
+                em{font-size: 16px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .nav{
+            &-link{
+                font-size: 14px;padding: 10px 10px;
+                em{font-size: 15px;}
+            }
+        }
+    }
+}

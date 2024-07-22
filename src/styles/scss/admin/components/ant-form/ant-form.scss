@@ -1,0 +1,11 @@
+.ant-switch{
+    background-color: rgba($accent-color, 0.15);
+    &.ant-switch-checked, &.ant-switch-checked:hover:not(.ant-switch-disabled){
+        background-color: $accent-color;
+    }
+    &:focus-visible{
+        outline: none !important;
+    }
+}
+@import './ant-checkbox';
+@import './ant-radio';

@@ -1,0 +1,13 @@
+export { default as UserAuth } from "./Auth/index";
+export { default as User } from "./UserServices/index";
+export { default as UserProfile } from "./Profile/index";
+export { default as Media } from "./Media/index";
+export { default as Footer } from "./Footer/index";
+export { default as UserHome } from "./UserHome/index";
+export { default as Translate } from "./Translate/index";
+export { default as ManageCmsUser } from "./ManageCms/index";
+export { default as UserContactUs } from "./UserContactUs/index";
+export { default as Payment } from "./Payment/index";
+export { default as VideoConferencing } from "./VideoConference/index";
+export { default as Refferals } from "./Refferals/index"
+export { default as CoupanCode } from "./CoupanCode/index";

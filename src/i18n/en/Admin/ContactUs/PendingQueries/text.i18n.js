@@ -1,0 +1,17 @@
+export const text = {
+  reply: "Reply",
+  sendReply: "Send Reply",
+  name: "Name",
+  emailId: "Email Id",
+  phoneNumber: "Phone Number",
+  country: "Country",
+  userQuery: "User Query",
+  queryType: "Query Type",
+  subscriptionPlan: "Subscription Plan",
+  createdTime: "Created Date & Time",
+  action: "Action",
+  registeredUsers: "Registered Users",
+  unregisteredUsers: "Unregistered Users",
+  readMore: "Read More",
+  replied: "Replied",
+};

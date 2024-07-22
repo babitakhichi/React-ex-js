@@ -1,0 +1,15 @@
+export { appLanguage as userLogin } from "./UserLogin/index.i18n";
+export { appLanguage as userSignUp } from "./UserSignUP/index.i18n";
+export { appLanguage as userFooter } from "./Footer/index.i18n";
+export { appLanguage as userProfile } from "./UserProfile/index.i18n";
+export { appLanguage as userContactUs } from "./UserContactUs/index.i18n";
+export { appLanguage as userPayment } from "./PaymentMethod/index.i18n";
+export { appLanguage as userHome } from "./UserHome/index.i18n";
+export { appLanguage as planAndSubscription } from "./PlanAndSubscription/index.i18n";
+export { appLanguage as videoConferencing } from "./VdeoConferencing/index.i18n";
+export { appLanguage as userPurchasePlan } from "./UserPurchasePlan/index.i18n";
+export { appLanguage as userPasswordProtected } from "./PasswordProtected/index.i18n";
+export { appLanguage as referFriend } from "./ReferFriend/index.i18n";
+export { appLanguage as referralRewards } from "./ReferralRewards/index.i18n";
+export { appLanguage as coupanCode } from "./CoupanCode/index.i18n";
+export { appLanguage as header } from "./UserHeader/index.i18n";

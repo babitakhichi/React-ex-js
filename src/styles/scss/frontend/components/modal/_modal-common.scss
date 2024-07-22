@@ -1,0 +1,114 @@
+.modal {
+    &-header {
+        h5{font-size: 22px;font-family: font(eb);}
+        padding: 35px 35px 30px;border-bottom: 0;
+    }
+    .modalHeader{
+        padding-top: 40px;
+        margin-bottom: 35px;
+        h3{font-size: 22px;font-family: font(eb); margin: 0;}
+        h3+p{margin-top: 15px;}
+    }
+    &.noHeader{
+        .modal-header{padding: 0;}
+    }
+    &-content {
+       
+    }
+    &-body {
+       padding: 0 40px 40px;
+    }
+    &-backdrop{
+        opacity: 0.8 !important;
+    }
+    .text-sm{
+        font-size: 15px; color: color(600);
+    }
+    .modalFooter{margin-top: 30px;}
+    .btn-close{
+        position: absolute;top:20px;right: 20px;font-size: 15px;color: color(550);opacity: 1;padding: 0; z-index: 1;
+        &:focus{box-shadow: none;}
+    }
+    .existingPlanList{
+        max-height: 350px; overflow: auto; margin-right: -40px; padding-right: 40px;
+        li{
+            color: color(550);
+            &:not(:last-child){
+                margin-bottom: 12px;
+            }
+        }
+    }
+    @include media-breakpoint-between(sm, xl){
+        &.translationModal{
+            .modal-xl{max-width: calc(100% - 20px);}
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        &-sm{
+            max-width: 416px;
+        }
+        &-md{
+            max-width: 550px;
+        }
+        &-lg{
+            max-width: 715px;
+        }
+    }
+    @include media-breakpoint-down(xxl) {
+        &-header {
+            padding: 20px;
+            h5{font-size: 20px;}
+        }
+        .modalHeader{
+            padding-top: 20px;
+            margin-bottom: 25px;
+            h3{font-size: 20px;}
+        }
+        &-body{
+            padding: 0 20px 20px;
+        }
+        .existingPlanList{
+             margin-right: -20px; padding-right: 20px;
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        &-header {
+            h5{font-size: 18px;}
+        }
+        .modalHeader{
+            h3{font-size: 18px;}
+        }
+        .modalFooter{margin-top: 20px;}
+    }
+    @include media-breakpoint-down(lg) {
+        &-header {
+            padding: 15px;
+        }
+        .modalHeader{
+            padding-top: 15px;
+            margin-bottom: 20px;
+        }
+        &-body{
+            padding: 0 15px 15px;
+        }
+        .existingPlanList{
+            margin-right: -15px; padding-right: 15px;
+       }
+    }
+    @include media-breakpoint-down(sm) {
+        &-header {
+            padding: 10px;
+            h5{font-size: 16px;}
+        }
+        .modalHeader{
+            h3{font-size: 16px;}
+        }
+        &-body{
+            padding: 0 10px 10px;
+        }
+        .btn-close{font-size: 13px;}
+        .existingPlanList{
+           max-height: 300px; margin-right: -10px; padding-right: 10px;
+       }
+    }
+}

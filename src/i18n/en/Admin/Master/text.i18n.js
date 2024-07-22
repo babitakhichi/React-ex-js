@@ -1,0 +1,18 @@
+export const text = {
+  documentType: "Type",
+  reason: "Enter Reason",
+  typeName: "Type Name",
+  deleteDocumentText: "you want to delete this document type?",
+  documentTypeTitle: "Document Type",
+  contactUsReasonTitle: "Contact Us Reason",
+  documentTypePlaceholder: "Enter Document Type",
+  addReason: "Add Reason",
+  editReason: "Edit Reason",
+  activateReasontext: "you want to activate this reason?",
+  deactivateReasontext: "you want to deactivate this reason?",
+  deleteReasonText: "you want to delete this reason?",
+  jItsiFeatures: "JItsi Features",
+  title: "Master",
+  category: "Category",
+  headquarter: "Headquarter",
+};

@@ -1,0 +1,111 @@
+.commonTable{
+    .table-responsive{
+        border: 1px solid rgba($color: #CCCCCC, $alpha: 0.50);
+        border-radius: 5px;
+        &::-webkit-scrollbar {
+            width: 10px;height: 10px;
+            @include media-breakpoint-down(lg) {
+                width: 6px;height: 6px;
+            }
+        }
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: auto !important;
+        tr{
+            th, td{
+                padding: 15px 12px;
+                font-size: 16px;
+                white-space: nowrap;
+            }
+            th{
+                font-size: 16px;
+                font-family: font(bd);
+                color: color(650);
+                &.sorting{
+                    position: relative; padding-right: 30px;
+                    &:before,&:after{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        display: block;
+                        opacity: 0.3;
+                    }
+                    &:before{
+                        right: 1em;
+                        content: "↑";
+                    }
+                    &:after{
+                        right: 0.5em;
+                        content: "↓";
+                    }
+                    &_desc, &_asc{
+                        &:before{
+                            right: 1em;
+                            content: "↑";
+                        }
+                        &:after{
+                            right: 0.5em;
+                            content: "↓";
+                        }
+                    }
+                    &_desc:after, &_asc:before{
+                        opacity: 1;
+                    }
+                }
+            }
+            td{
+                border-width: 0 0 1px 0;
+                border-color: rgba($color: #CCCCCC, $alpha: 0.50);
+            }
+        }
+        tbody{
+            tr{
+                &:last-of-type{
+                    td{
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+        thead{
+            background-color: color(100);
+        }
+        @include media-breakpoint-down(xl){
+            tr {
+                th, td{padding: 8px; font-size: 14px;}
+            }
+        }
+        @include media-breakpoint-down(lg){
+            tr {
+                th, td{font-size: 13px;}
+            }
+        }
+        @include media-breakpoint-up(lg){
+            tr{
+                td, th{
+                    &:first-child{padding-left: 24px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .userPagination{
+            .text-md-end.col-md-3{text-align: right !important;}
+        }
+    }
+    @include media-breakpoint-down(md){
+        .userPagination{
+            .text-md-end.col-md-3{text-align: center !important;margin-top: 10px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .userPagination{
+            .text-md-end.col-md-3, .col-md-9.col-sm-12{width: 100%;}
+            .dataTables_paginate{
+                ul{justify-content: center !important;}
+            } 
+        }
+    }
+}
